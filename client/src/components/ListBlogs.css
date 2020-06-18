@@ -1,0 +1,82 @@
+.list {
+    color: #fff;
+    width: 85%;
+    background-color: #bf07ac;
+    height: 50%;
+    max-height: auto;
+    margin: 20px auto;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.list p {
+    padding: 10px;
+}
+
+.list p span {
+    position: absolute;
+    left: 77%;
+    cursor: pointer;
+}
+
+.del-button {
+    background-color: #bf07ac;
+    border: none;
+    border-radius: 5%;
+    color: black;
+    padding: 4px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px;
+    margin: 2px 2px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+  }
+
+.del-button:hover {
+    background-color: #555555;
+    color: white;
+}
+
+.timestamp{
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    margin-left: 17%;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .list p span {
+        position: absolute;
+        left: 80%;
+        cursor: pointer;
+    }
+
+    .list {
+        color: #fff;
+        width: 55%;
+        background-color: #bf07ac;
+        height: 50%;
+        max-height: auto;
+        margin: 20px auto;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .del-button {
+        font-size: 12px;
+        margin: 2px 2px;
+        padding: 6px 12px; 
+    }
+
+    .timestamp{
+        color: white;
+        font-size: 14px;
+        text-align: center;
+        margin-left: 25%;
+    }
+
+}
