@@ -10,7 +10,7 @@ const ListBlogs = () => {
 
     async function deleteBlog(id) {
         try {
-            await fetch(`http://localhost:5000/blogs/${id}`, {
+            await fetch(`/blogs/${id}`, {
                 method: "DELETE",
             });
 
@@ -21,7 +21,7 @@ const ListBlogs = () => {
     }
 
     async function getBlogs() {
-        const res = await fetch("http://localhost:5000/blogs");
+        const res = await fetch("/blogs");
         
         const blogArray = await res.json();
 

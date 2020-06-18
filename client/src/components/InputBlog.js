@@ -11,14 +11,14 @@ const InputBlog = () => {
          e.preventDefault();
          try {
              const body = { description };
-             const response = await fetch("http://localhost:5000/blogs", {
+             const response = await fetch("/blogs", {
                  method: "POST",
                  headers: { "Content-Type": "application/json" },
                  body: JSON.stringify(body)
              });
              
              console.log(response);
-             window.location = "/";
+             // window.location = "/";
          } catch (err) {
              console.error(err.message);
          }
