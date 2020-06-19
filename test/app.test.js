@@ -19,7 +19,7 @@ describe('GET /blog/:id test', () => {
       .get('/blogs/23')
       .expect(200, '{"blog_id":23,"description":"Sample blog"}')
   });
-});
+})
 
 
 
