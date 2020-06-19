@@ -22,9 +22,6 @@ if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, "client/build")));
 }
 
-console.log(__dirname);
-console.log((path.join(__dirname, "client/build")));
-
 //ROUTES//
 
 // get all blogs
@@ -63,20 +60,6 @@ app.post('/blogs', async (req, res) => {
     }
 });
 
-// update a blog
-
-app.put('/blogs/:id', async (req, res) => {
-    try {
-        const { id } = req.params;
-        const { description } = req.body;
-        const updateBlog = await pool.query("UPDATE  blog SET description = $1 WHERE blog_id = $2", [description, id]);
-
-        res.json("Blog was updated");
-    } catch (err) {
-        console.error(err.message);
-    }
-})
-
 // delete a blog
 
 app.delete('/blogs/:id', async (req, res) => {
@@ -99,3 +82,4 @@ app.listen(PORT, () => {
     console.log(`Server is starting on port ${PORT}`);
 });
 
+module.exports = app;
