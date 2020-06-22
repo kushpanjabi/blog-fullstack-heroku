@@ -3,7 +3,7 @@ import './Home.css';
 import InputBlog from './components/InputBlog';
 
 
-function App() {
+function Home() {
   return( 
   <Fragment>
     <div className="container">
@@ -13,4 +13,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
