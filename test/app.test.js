@@ -9,7 +9,7 @@ describe('GET /blog test', () => {
   it('should return status 200 and two blogs: one sample one new', () => {
     return supertest(app)
       .get('/blogs')
-      .expect(200, '[{"blog_id":23,"description":"Sample blog"},{"blog_id":25,"description":"new blog"},{"blog_id":29,"description":"a"}]')
+      .expect(200, '[{"blog_id":23,"description":"Sample blog"},{"blog_id":25,"description":"new blog"}]')
   });
 });
 
@@ -20,6 +20,7 @@ describe('GET /blog/:id test', () => {
       .expect(200, '{"blog_id":23,"description":"Sample blog"}')
   });
 })
+
 
 
 
