@@ -4,7 +4,7 @@
     background-color: #bf07ac;
     height: 50%;
     max-height: auto;
-    margin: 20px auto;
+    margin: 10% auto;
     border-radius: 5px;
     font-size: 13px;
 }
@@ -34,7 +34,16 @@
     cursor: pointer;
   }
 
-.del-button:hover {
+  .faicons{
+    margin: 2% 2%;
+    border-radius: 2%;
+    font-size: 10px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+
+}
+
+.faicons:hover {
     background-color: #555555;
     color: white;
 }

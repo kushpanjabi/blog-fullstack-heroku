@@ -1,4 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './ListBlogs.css';
  
 
@@ -40,7 +41,9 @@ const ListBlogs = () => {
                 {blogs.map(blog => (
                 <div className="list">
                     <p>{blog.description}</p>
-                    <button className="del-button" onClick={() => deleteBlog(blog.blog_id)}>Delete</button>
+                    <span>
+                        <FontAwesomeIcon className="faicons" icon='trash' onClick={() => deleteBlog(blog.blog_id)} />
+                    </span>
                  </div>
                 ))}
                 
