@@ -1,0 +1,162 @@
+body {
+  background: rgba(0, 0, 0, 0.9);
+  margin: 0;
+  color: rgb(190, 38, 152);
+}
+
+.enter-btn{
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  text-decoration: none;
+  padding: 2%;
+  margin-top: 5%;
+  border-radius: 10%;
+  font-size: 15px;
+  width: 20%;
+}
+
+.enter-btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  transition: 0.5s;
+}
+
+.link-text{
+  text-decoration: none;
+}
+
+.blk{
+  color: black;
+}
+
+.center {
+  text-align: center;
+}
+
+.showcase::after {
+  content: '';
+  height: 100vh;
+  width: 100%;
+  background-image: url(https://media.newyorker.com/photos/5cacdca59cf262302c4a0d00/master/w_2560%2Cc_limit/Petrusich-Chill.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  transition: all 1000ms;
+}
+
+.content {
+  position: absolute;
+  z-index: 1;
+  top: 10%;
+  left: 50%;
+  margin-top: 105px;
+  margin-left: -145px;
+  width: 300px;
+  height: 350px;
+  text-align: center;
+  transition: all 1000ms;
+}
+
+.content .logo {
+  height: 180px;
+  width: 180px;
+}
+
+.content .title {
+  font-size: 2.2rem;
+  font-weight: bolder;
+  margin-top: 1rem;
+}
+
+.content .text {
+  line-height: 1.7;
+  margin-top: 1rem;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
+  padding: 4rem 1rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-2 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.center {
+  text-align: center;
+  margin: auto;
+}
+
+.bg-light {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.bg-dark {
+  background: #333;
+  color: #f4f4f4;
+}
+
+footer {
+  padding: 2.2rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Small Screens */
+@media (max-width: 560px) {
+  .showcase::after {
+    height: 50vh;
+  }
+
+  .content {
+    top: 5%;
+    margin-top: 5px;
+  }
+
+  .content .logo {
+    height: 140px;
+    width: 140px;
+  }
+
+  .content .text {
+    display: none;
+  }
+
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .services div {
+    border-bottom: #333 dashed 1px;
+    padding: 1.2rem 1rem;
+  }
+}
+
+/* Landscape */
+@media (max-height: 500px) {
+  .content .title,
+  .content .text {
+    display: none;
+  }
+
+  .content {
+    top: 0;
+  }
+}
